@@ -157,7 +157,7 @@ def call_groq(messages: list) -> str:
 
     client = Groq(api_key=st.secrets["GROQ_API_KEY"])
     resp = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=messages,
         temperature=0.7,
         max_tokens=2000,
